@@ -2,7 +2,7 @@
 
 A small native SwiftUI app that converts one Xbox 360 `.iso` image to a `.zar` archive using the conversion engine from [XGDTool](https://github.com/wiredopposite/XGDTool).
 
-<img width="970" height="678" style="width:50%" alt="image" src="https://github.com/user-attachments/assets/578ad0fa-ae0d-49e0-bc4c-2f5e72c4e766" />
+<img width="970" height="678" style="width:75%" alt="image" src="https://github.com/user-attachments/assets/578ad0fa-ae0d-49e0-bc4c-2f5e72c4e766" />
 
 ## Build
 
