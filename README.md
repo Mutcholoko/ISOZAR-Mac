@@ -12,13 +12,22 @@ Requirements: macOS 13+, Xcode Command Line Tools, CMake, and XGDTool's native d
 
 The first build clones XGDTool and its submodules, builds the CLI with `--zar` support, and packages it inside `outputs/ISO to ZAR.app`. Open the app by double-clicking it.
 
-The interface selects an ISO, defaults the output beside it with a `.zar` extension, and runs the equivalent of:
+## Using the GitHub release
+
+This app is distributed without an Apple Developer ID signature or notarization. When downloaded from GitHub, macOS may warn that **“ISO to ZAR” is damaged and can’t be opened** or block it as an unidentified developer. To use the distributed file, you need to:
+
+1. Download the app archive from **Releases** and unzip it.
+2. If macOS says the app is damaged or from an unidentified developer, open **System Settings → Privacy & Security**, scroll to the Security section, and choose **Open Anyway** for ISO to ZAR if that option appears. Authenticate if macOS asks.
+3. Open the Terminal and run:
 
 ```sh
-XGDTool --zar --offline /path/to/game.iso /path/to/output-folder
+cd Downloads
+xattr -dr com.apple.quarantine "ISO to ZAR.app"
 ```
 
-Online metadata lookup is disabled for this focused converter. XGDTool's output naming and archive behavior remain upstream-defined.
+This removes Gatekeeper's downloaded-file quarantine check for that copy.
+
+The interface selects an ISO, defaults the output beside it with a `.zar` extension.
 
 ## License
 
